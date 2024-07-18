@@ -1,1 +1,0 @@
-<script src="https://kit.fontawesome.com/5e1441734c.js" crossorigin="anonymous"></script>

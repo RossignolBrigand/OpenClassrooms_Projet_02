@@ -128,7 +128,7 @@ header {
     text-align: center;
     padding: 10px; /* the text behaves weirdly when setting a padding of more than 10px */
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0; /* tbd: find reasons why buttons lose their selectable trait when changing border params */
 }
 /* .submit-button :hover {
     filter: brightness(0.5); 
@@ -137,6 +137,28 @@ header {
     color: black;
 }
 /****** Filter Group ********/
+.filter-button-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 80vw;
+}
+.filter-button {
+    width: auto;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: white;
+    /* border: 1px solid var(--filter-bg-color); */
+    /* tbd: find reasons why buttons lose their selectable trait when changing border params */
+}
+.filter-button-group :hover {
+    background-color: var(--filter-bg-color);
+}
+.filter-button i {
+    padding: 10px;
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
