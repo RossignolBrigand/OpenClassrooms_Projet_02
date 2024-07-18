@@ -1,4 +1,5 @@
 /****** General ***********/
+
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -8,16 +9,35 @@
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
     --filter-btn-color: #D9D9D9;
-}
-
-.fa-solid {
-    color: var(--main-color);
+    --main-light-color: #ffffff;
 }
 
 body {
     display: flex;
     justify-content: center;
     font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: large;
+}
+
+h2 {
+    font-size: large;
+}
+
+p {
+    font-size: medium;
+    margin-top: 0px;
+}
+
+.fa-solid {
+    color: var(--main-color);
 }
 
 .main-container {
@@ -27,18 +47,13 @@ body {
     box-sizing: border-box;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .section-title {
     margin: 0;
     font-size: 22px;
 }
 
 .card {
-    background-color: white;
+    background-color: var(--main-light-color);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -59,30 +74,28 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
 /****** Header *******/
-/*TBD: Find a way to deal with nav placement & setup responsive rules*/
+/** TBD: Find a way to deal with nav placement & setup responsive rules **/
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    height: 79px;
+    height: auto;
 }
-.nav-container {
-    display: flex;
-    margin-top: 0px;
-    box-sizing: content-box;
-}
+
 .nav-list {
     display: flex;
     flex-direction: row;
 }
 
 .nav-item {
-    list-style-type: none;
+    list-style-type: none; /** Removes the default styling of lists **/
     padding-right: 30px;
-
+    /** height: 49px; **/ 
 }
 
 .nav-item :hover {
@@ -94,49 +107,70 @@ header {
     width: 60px;
     height: 20px;
 }
+
 #booki-accueil :hover {
     filter: brightness(0.8) ;
 }
+
 /****** Search Bar *******/
+
 .search-container {
     display:flex;
     flex-direction: row;
-    /* flex-wrap: nowrap; */
-    margin-top: 10px;
+    margin: 10px 0 10px 0; /** Sets margins between containers **/
     font-size: 18px;
 }
+
 .search-container button, input {
     height: 3em;
     float: left;
     cursor: pointer;
     border: 1px solid var(--filter-btn-color);
 }
+
 .search-container button:not(:last-child), input:not(:last-child){
     border-right: none;
 }
+
 .search-container button {
     width: 3em;
     border-radius: 10px 0 0 10px;
 }
+
 .search-field {
-    text-indent: 1em; /*Place le texte d'input un peu plus loin du bord gauche*/
+    text-indent: 1em; /** Place le texte d'input un peu plus loin du bord gauche **/
+    font-weight: 700;
 }
+
 .submit-button {
     background-color: var(--main-color);
     color: var(--main-bg-color);
     font-weight: 700;
     text-align: center;
-    padding: 10px; /* the text behaves weirdly when setting a padding of more than 10px */
+    padding: 10px; /** the text behaves weirdly when setting a padding of more than 10px **/
     border: none;
-    border-radius: 0 10px 10px 0; /* tbd: find reasons why buttons lose their selectable trait when changing border params */
+    border-radius: 0 10px 10px 0; /** tbd: find reasons why buttons lose their selectable trait when changing border params **/
 }
-/* .submit-button :hover {
+
+.submit-button :hover {
     filter: brightness(0.5); 
-} */
+} /** Not Working for the moment **/
+
 .fa-location-dot {
-    color: black;
+    color: black; /** Sets the color of the location pin icon **/
 }
+
 /****** Filter Group ********/
+
+.filters-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-container h2 {
+    margin-right: 10px;
+}
+
 .filter-button-group {
     display: flex;
     flex-direction: row;
@@ -144,23 +178,46 @@ header {
     gap: 10px;
     max-width: 80vw;
 }
+
 .filter-button {
     width: auto;
-    height: 50px;
+    height: 45px;
     border-radius: 25px;
+    background-color: var(--main-light-color);
+    padding-right: 15px;
     text-align: center;
-    background-color: white;
-    /* border: 1px solid var(--filter-bg-color); */
-    /* tbd: find reasons why buttons lose their selectable trait when changing border params */
+    font-weight:600;
+    border: 2px solid var(--filter-btn-color);
+    /** tbd: find reasons why buttons lose their selectable trait when changing border params **/
+    /** tbd: Find out how to deal with icon getting borders and changing colors on their own **/
 }
+
 .filter-button-group :hover {
     background-color: var(--filter-bg-color);
+    border: 2px solid var(--filter-btn-color);
 }
+
 .filter-button i {
-    padding: 10px;
+    padding: 10px; /** Sets spacing between icons and text within buttons **/
+}
+
+/*** Infos Group ***/
+
+.infos-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+#infos-button {
+    height: 24px;
+    width: 24px;
+    border-radius: 100%; 
+    font-size: 10px;
+    background-color: var(--main-light-color);
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -174,11 +231,13 @@ header {
 }
 
 /****** Hebergements ***********/
+
 .hebergements {
     width: 65%;
 }
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -226,10 +285,11 @@ header {
 
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/** Le code ci-dessous correspond à la version responsive uniquement **/
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/** Medium devices (tablets, less/equal than 1024px) **/
+
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -263,7 +323,8 @@ header {
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/** Small devices (phones, less than 768px) **/
+
 @media (max-width: 767.98px) {
     .hebergements-and-populaires {
         flex-direction: column;

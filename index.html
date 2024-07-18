@@ -32,8 +32,10 @@
             <div class="nav-container">
                 <nav >
                     <ul class="nav-list">
-                        <li class="nav-item"><a  href="#">Hébergements</a></li>
-                        <li class="nav-item"><a  href="#">Activités</a></li>
+                        <!-- <li class="nav-item"><a  href="#">Hébergements</a></li>
+                        <li class="nav-item"><a  href="#">Activités</a></li> -->
+                        <li class="nav-item"><button class="nav-button" type="button">Hébergements</button></li>
+                        <li class="nav-item"><button class="nav-button" type="button">Activités</button></li>
                     </ul>
                 </nav>
             </div>
@@ -47,23 +49,23 @@
                 </div>
                 <div class="search-container">
                     <form action="#" method="get">
-                        <button type="button" class="fa-solid fa-location-dot"></button>>
-                        <input class="search-field" type="search" id="citysearch" name="citysearch" placeholder="Marseille, France" aria-placeholder="entrez-votre-recherche">
+                        <button type="button" class="fa-solid fa-location-dot"></button>
+                        <input class="search-field" type="search" id="citysearch" name="citysearch" placeholder="Ex: Marseille, France" aria-placeholder="entrez-votre-recherche">
                         <input class="submit-button" type="submit" value="Rechercher">
-                    </form>>
+                    </form>
                 </div>
                 <div class="filters-container">
                     <h2>Filtres</h2>
                     <div class="filter-button-group">
-                        <button class="filter-button"><i class="fa-solid fa-money-bill-wave"></i>Economique</button>
+                        <button class="filter-button"><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
                         <button class="filter-button"><i class="fa-solid fa-person"></i>Familial</button>
                         <button class="filter-button"><i class="fa-solid fa-heart"></i>Romantique</button>
                         <button class="filter-button"><i class="fa-solid fa-fire"></i>Nos pépites</button>
                     </div>
                 </div>
                 <div class="infos-container">
-                    <button id="info-button"><i class="fa-solid fa-info"></i></button>
-                    <p id="options-infos-text">Plus de 500 logements disponibles dans cette ville</p>
+                    <button id="infos-button"><i class="fa-solid fa-info"></i></button>
+                    <p id="options-infos-text">[Plus de ${500} logements disponibles dans cette ville]</p> <!--Text updated through JS-->
                 </div>
             </div>
             <!-- #endregion -->
