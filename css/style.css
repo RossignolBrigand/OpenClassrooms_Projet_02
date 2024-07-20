@@ -97,11 +97,11 @@ header {
     float: left;
 }
 
-.nav-button :not(:last-child) {
+.nav-button:not(:last-child) {
     padding-right: 30px;
 }
 
-.nav-item :hover {
+.nav-item:hover {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
     cursor: pointer;
@@ -112,7 +112,7 @@ header {
     height: 20px;
 }
 
-#booki-accueil :hover {
+#booki-accueil:hover {
     filter: brightness(0.8) ;
 }
 
@@ -156,7 +156,7 @@ header {
     border-radius: 0 10px 10px 0; /** tbd: find reasons why buttons lose their selectable trait when changing border params **/
 }
 
-.submit-button :hover {
+.submit-button:hover {
     filter: brightness(0.5); 
 } /** Not Working for the moment **/
 
@@ -185,7 +185,7 @@ header {
     max-width: 80vw;
 }
 
-.filter-button :hover {
+.filter-button:hover {
     background-color: var(--filter-bg-color);
     cursor: pointer;
 }
@@ -235,11 +235,11 @@ header {
     background-color: var(--main-light-color);
     border: 1px solid var(--filter-btn-color);
 }
-#infos-button :hover {
+#infos-button:hover {
     cursor: pointer;
 }
 
-#infos-button :hover .hidden-info {
+#infos-button:hover .hidden-info {
     display: block;
 } 
 
