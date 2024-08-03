@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Booki</title>
     <!-- Favicon -->
      <!-- TBD -->
@@ -13,12 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS & Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/style--desktop.css">
+    <link rel="stylesheet" href="./css/style--responsive.css">
+
     <!-- Javascript -->
-    <script rel="script" src="javascript/script.js" defer></script>
+    <script rel="script" src="./javascript/script.js" defer></script>
 </head>
 
 <body>
@@ -26,14 +28,14 @@
         <header>
             <div class="logo-container">
                 <a id="booki-accueil" href="" title="Accueil">
-                    <img id="booki-logo" src="images/logo/Booki.png" alt="Logo Booki">
+                    <img id="booki-logo" src="images/logo/Booki@3x.png" alt="Logo Booki">
                 </a>
             </div>
             <nav >
                 <div class="nav-container">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="#hebergements"><button class="nav-button" type="button">Hébergements</button></a></li>
-                        <li class="nav-item"><a href="#activites"><button class="nav-button" type="button">Activités</button></a></li>
+                        <li class="nav-item"><a class="nav-button" href="#hebergements">Hébergements</a></li>
+                        <li class="nav-item"><a class="nav-button" href="#activites">Activités</a></li>
                     </ul>
                 </div>
             </nav>
@@ -47,9 +49,12 @@
                 </div>
                 <div class="search-container">
                     <form action="#" method="get">
-                        <button type="button" class="fa-solid fa-location-dot"></button>
-                        <input class="search-field" type="search" id="citysearch" name="citysearch" placeholder="Ex: Marseille, France">
-                        <input class="submit-button" type="submit" value="Rechercher">
+                        <button id="location-button" type="button" class="fa-solid fa-location-dot"></button>
+                        <input id="search-field" type="search" name="citysearch" placeholder="Marseille, France">
+                        <button id="submit-button" type="submit">
+                            <span id="submit-button-text">Rechercher</span>
+                            <i id="submit-button-icon" class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
                 <div class="filters-container">
@@ -62,7 +67,7 @@
                     </div>
                 </div>
                 <div class="info-container">
-                    <button id="info-button" role="contentinfo"><i class="fa-solid fa-info"></i></button>
+                    <button id="info-button"><i class="fa-solid fa-info"></i></button>
                     <p id="options-info-text">[Plus de ${500} logements disponibles dans cette ville]</p> <!--Text updated through JS-->
                 </div>
             </div>
@@ -76,7 +81,7 @@
                     <div class="hebergements-cards">
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel avec un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel du port</h3>
@@ -95,7 +100,7 @@
                         </a>
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/febrian-zakaria.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/febrian-zakaria.jpg" alt="Chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Chez Amina</h3>
@@ -114,7 +119,7 @@
                         </a>
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/reisetopia.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/reisetopia.jpg" alt="Chambre d'hôtel avec un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Les mouettes</h3>
@@ -133,7 +138,7 @@
                         </a>
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/annie-spratt.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/annie-spratt.jpg" alt="Chambre d'hôtel avec un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel de la mer</h3>
@@ -152,7 +157,7 @@
                         </a>
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/marcus-loke.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/marcus-loke.jpg" alt="Chambre d'hôtel avec un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Auberge La Canebière</h3>
@@ -171,7 +176,7 @@
                         </a>
                         <a href="">
                             <article class="card">
-                                <img src="./images/hebergements/nicate-lee.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/nicate-lee.jpg" alt="Chambre d'hôtel avec un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Auberge Le Panier</h3>
@@ -189,12 +194,12 @@
                             </article>
                         </a>
                     </div>
-                    <a class="afficher-plus" href="">Afficher plus</a>
+                    <a  id="afficher-plus" href="">Afficher plus</a>
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <a href="" role="button"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></a>
                     </div>
                     <div class="populaires-cards">
                         <a href="">
@@ -264,7 +269,7 @@
                 <div class="activites-cards">
                     <a href="">
                         <article class="card">
-                            <img src="images/activites/reno-laithienne.jpg" alt="Image d'un port avec des bateaux amarés">
+                            <img src="images/activites/reno-laithienne.jpg" alt="Port avec des bateaux amarés">
                                 <div class="card-text">
                                     <h3>Vieux-Port</h3>
                                 </div>
@@ -272,7 +277,7 @@
                     </a>
                     <a href="">
                         <article class="card">
-                            <img src="images/activites/paul-hermann.jpg" alt="Image d'un fort de pierres">
+                            <img src="images/activites/paul-hermann.jpg" alt="Fort de pierre">
                                 <div class="card-text">
                                     <h3>Fort de Pomègues</h3>
                                 </div>
@@ -280,7 +285,7 @@
                     </a>
                     <a href="">
                         <article class="card">
-                            <img src="images/activites/kilyan-sockalingum.jpg" alt="Image d'une falaise donnant sur la mer">
+                            <img src="images/activites/kilyan-sockalingum.jpg" alt="Falaise donnant sur la mer">
                                 <div class="card-text">
                                     <h3>Parc national des Calanques</h3>
                                 </div>
@@ -288,10 +293,10 @@
                     </a>
                     <a href="">
                         <article class="card">
-                            <img src="images/activites/florian-wehde.jpg" alt="Image d'une ville avec une église au loin">
-                                <div class="card-text">
-                                    <h3>Notre-Dame-de-la-Garde</h3>
-                                </div>
+                            <img src="images/activites/florian-wehde.jpg" alt="Ville avec une église au loin">
+                            <div class="card-text">
+                                <h3>Notre-Dame-de-la-Garde</h3>
+                            </div>
                         </article>
                     </a>
                 </div>
@@ -300,7 +305,7 @@
         </main>
         <footer>
             <div class="footer-container">
-                <div class="a-propos">
+                <div class="footer-section">
                     <h2>À Propos</h2>
                     <div class="footer-links">
                         <ul>
@@ -310,7 +315,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="nos-hebergements">
+                <div class="footer-section">
                     <h2>Nos Hébergements</h2>
                     <div class="footer-links">
                         <ul>
@@ -319,7 +324,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="assistance">
+                <div class="footer-section">
                     <h2>Assistance</h2>
                     <div class="footer-links">
                         <ul>
@@ -332,5 +337,4 @@
         </footer>
     </div>
 </body>
-
 </html>
