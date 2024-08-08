@@ -445,8 +445,10 @@ header {
 }
 
 .activites-title {
+    justify-content: flex-start;
     margin-bottom: 30px;
 }
+
 .activites-title h2 {
     margin: 0;
 }
@@ -467,7 +469,6 @@ header {
     height: 450px;
     box-sizing: border-box;
     font-size: 16px;
-    text-align: center;
 }
 
 .activites-cards img {
@@ -485,6 +486,7 @@ header {
     align-items: center;
     padding: 0 20px;
 }
+
 .card-text h3 {
     margin: 0;
     display: flex;
