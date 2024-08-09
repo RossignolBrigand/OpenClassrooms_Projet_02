@@ -14,6 +14,8 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    /** General **/
+
     /** Filters **/
     .filters-container {
         flex-direction: column;
@@ -86,7 +88,6 @@
         font-size: 16px;
         justify-content: center;
         align-items: center;
-        text-align: start;
     }
 }
 
@@ -163,10 +164,14 @@
         width: 100%;
     }
     
+    .search-container button{
+        min-width: 49px;
+    }
     #search-field {
+        width: 237px;
         flex: 1;
     }
-
+    
 
     /** Handle the icon switching of the submit button **/
 
