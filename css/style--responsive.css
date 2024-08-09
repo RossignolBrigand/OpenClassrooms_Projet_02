@@ -164,10 +164,14 @@
         width: 100%;
     }
     
+    .search-container button{
+        min-width: 49px;
+    }
     #search-field {
+        width: 237px;
         flex: 1;
     }
-
+    
 
     /** Handle the icon switching of the submit button **/
 
