@@ -12,7 +12,7 @@
 
 /** Medium devices (tablets, less/equal than 1024px) **/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 860px) and (max-width: 1024px) {
 
     /** General **/
 
@@ -85,11 +85,57 @@
     }
 
     .activites-cards h3 {
-        font-size: 16px;
         justify-content: center;
         align-items: center;
     }
 }
+
+/** Tablets small **/
+@media (min-width: 768px) and (max-width: 859.98px ) {
+
+    /** Options group **/
+
+    .filters-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-button-group {
+        margin-top: 10px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    
+    /** Hebergements **/
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .hebergements-cards a {
+        flex: 1 1 calc(50% - 30px);
+    }
+
+    /** Populaires **/
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /** Activités **/
+
+    .activites-cards a {
+        flex: 1 1 calc(50% - 30px);
+    }
+
+    .activites-cards .card {
+        height: 270px;
+    }
+}
+
 
 /** Small devices (phones, less than 768px) **/
 
@@ -167,9 +213,11 @@
     .search-container button{
         min-width: 49px;
     }
+
     #search-field {
         width: 237px;
         flex: 1;
+        font-size: 14px;
     }
     
 
